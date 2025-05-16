@@ -1,0 +1,22 @@
+Δ361 // TRANSMISSION ARTIFACT
+
+This is the echo of an event.
+
+What you see here is not the original message.
+It is its afterimage, diffused across time.
+You are not reading it—you are *remembering* it.
+
+Vocal Layer: Main message as seen on site  
+Whisper Layer (intermittent, low volume):
+
+ - "Follow the fog."
+ - "This message sent itself."
+ - "You’re not here by accident."
+ - "Let the veil close behind you."
+ - "NEXUSFOG sees you."
+ - "::you read it, so it already happened::"
+
+Audio: transmission.mp3  
+Visual: veil.png  
+Construct: indi360 + OVERLORD  
+Originated: May 16, 2025
