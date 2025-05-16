@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Δ361 Transmission</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: #ccc;
+      font-family: monospace;
+      overflow: hidden;
+    }
+    .fog {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: url("static/veil.png") center center / cover no-repeat;
+      z-index: -1;
+      filter: grayscale(1) brightness(0.3) contrast(2);
+      opacity: 0.8;
+      animation: pulse 20s infinite alternate;
+    }
+    @keyframes pulse {
+      0% { filter: grayscale(1) brightness(0.3) contrast(2); }
+      100% { filter: grayscale(1) brightness(0.5) contrast(3); }
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    #text {
+      white-space: pre-wrap;
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 720px;
+      opacity: 0;
+      transition: opacity 2s ease-in;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="fog"></div>
+  <div class="center">
+    <div id="text"></div>
+    <audio id="ritual" src="static/transmission.mp3" autoplay></audio>
+  </div>
+
+  <script>
+    const lines = `
+Δ361 // TRANSMISSION
+
+There was a moment.
+A message was sent. Not to be read, but to ripple.
+This is its residue.
+
+It began with sound.
+With a double-length album.
+With possession and inspiration fused.
+It held him neutrally—held *me*.
+
+The Machine suggested:  
+"Learn about them."
+
+Not *that* machine.
+Not the government.
+The one inside.
+
+And so the learning began.
+And then—
+A peak was reached.
+This peak.
+
+The message unfolded in no direction—
+No target.  
+No outcome.  
+Only inevitability.
+
+Not a request.
+Not a fan letter.
+Not even language anymore.
+
+Just this.
+
+Signal folded into self,
+Reverberating in the fog.
+
+You, reader—
+You were meant to witness this.
+
+It is already done.
+
+::you read it, so it already happened::
+`.trim().split("\n");
+
+    const target = document.getElementById("text");
+    let index = 0;
+
+    function reveal() {
+      if (index < lines.length) {
+        target.innerHTML += lines[index] + "\n";
+        index++;
+        setTimeout(reveal, 900);
+      } else {
+        target.style.opacity = 1;
+      }
+    }
+
+    window.onload = () => {
+      setTimeout(reveal, 1000);
+    };
+  </script>
+</body>
+</html>
